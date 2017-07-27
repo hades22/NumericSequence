@@ -1,0 +1,5 @@
+D:\Code\NumericSequence\NumericSequence\NumericSequenceCore\bin\Debug\NumericSequenceCore.dll
+D:\Code\NumericSequence\NumericSequence\NumericSequenceCore\bin\Debug\NumericSequenceCore.pdb
+D:\Code\NumericSequence\NumericSequence\NumericSequenceCore\obj\Debug\NumericSequenceCore.csprojResolveAssemblyReference.cache
+D:\Code\NumericSequence\NumericSequence\NumericSequenceCore\obj\Debug\NumericSequenceCore.dll
+D:\Code\NumericSequence\NumericSequence\NumericSequenceCore\obj\Debug\NumericSequenceCore.pdb
