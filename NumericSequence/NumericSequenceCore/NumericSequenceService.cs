@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace NumericSequenceCore
     public class NumericSequenceService
     {
         public int TheNumber { get; set; }
-        private int[] fibonacci;
+        
 
         public List<int> All()
         {
@@ -72,22 +73,18 @@ namespace NumericSequenceCore
             return result;
         }
 
-        private void FibonacciGenerate()
+        public ArrayList FibonacciGenerate()
         {
+            ArrayList fibonacci = new ArrayList();
             fibonacci[0] = 0;
             fibonacci[1] = 1;
-            for (int i = 2; fibonacci[i - 1] <= TheNumber; i++)
+            for (int i = 2; (int)fibonacci[i - 1] <= TheNumber; i++)
             {
-                fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+                fibonacci[i] = (int)fibonacci[i - 1] + (int)fibonacci[i - 2];
             }
-
+            return fibonacci;
         }
 
-        public List<int> Fibonacci()
-        {
-            FibonacciGenerate();
-            return fibonacci.ToList();
-        }
 
     }
 }
