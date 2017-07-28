@@ -53,9 +53,9 @@ namespace NumericSequenceCore
             return result;
         }
 
-        public List<string> Multipler()
+        public ArrayList Multipler()
         {
-            var result = new List<string>();
+            var result = new ArrayList();
             if (TheNumber > 0)
             {
                 for (int i = 0; i <= TheNumber; i++)
@@ -67,7 +67,7 @@ namespace NumericSequenceCore
                         value = "E";
                     if (i % 15 == 0)
                         value = "Z";
-                    result.Add(value);
+                    result.Insert(i, value);
                 }
             }
             return result;
@@ -76,11 +76,11 @@ namespace NumericSequenceCore
         public ArrayList FibonacciGenerate()
         {
             ArrayList fibonacci = new ArrayList();
-            fibonacci[0] = 0;
-            fibonacci[1] = 1;
+            fibonacci.Insert(0, 0);
+            fibonacci.Insert(1, 1);
             for (int i = 2; (int)fibonacci[i - 1] <= TheNumber; i++)
             {
-                fibonacci[i] = (int)fibonacci[i - 1] + (int)fibonacci[i - 2];
+                fibonacci.Insert(i, (int)fibonacci[i - 1] + (int)fibonacci[i - 2]);
             }
             return fibonacci;
         }

@@ -40,5 +40,47 @@ namespace NumericSequenceTest
             }
         }
 
+        [TestMethod]
+        public void MultiplerTest()
+        {
+            var numService = new NumericSequenceService();
+            numService.TheNumber = 15;
+            var multiplerList = numService.Multipler();
+            for (int i = 0; i <= numService.TheNumber; i++)
+            {
+                if ((string) multiplerList[i] == "C")
+                {
+                    Assert.AreEqual(i%3, 0);
+                }
+
+                if ((string) multiplerList[i] == "E")
+                {
+                    Assert.AreEqual(i%5, 0);
+                }
+
+                if ((string) multiplerList[i] == "Z")
+                {
+                    Assert.AreEqual(i%15, 0);
+                }
+            }
+        }
+
+        [TestMethod]
+        public void FibonacciTest()
+        {
+            var numService = new NumericSequenceService();
+            numService.TheNumber = 50;
+            var fibonacciList = numService.FibonacciGenerate();
+            Assert.AreEqual((int) fibonacciList[0], 0);
+            Assert.AreEqual((int) fibonacciList[1], 1);
+
+            for (int i = 2; (int) fibonacciList[i] <= numService.TheNumber; i++)
+            {
+                Assert.AreEqual((int) fibonacciList[i], (int) fibonacciList[i - 1] + (int) fibonacciList[i - 2]);
+            }
+
+        }
+
+
     }
 }
