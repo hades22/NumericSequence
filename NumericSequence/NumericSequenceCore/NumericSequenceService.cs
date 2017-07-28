@@ -88,9 +88,11 @@ namespace NumericSequenceCore
             ArrayList fibonacci = new ArrayList();
             fibonacci.Insert(0, 0);
             fibonacci.Insert(1, 1);
-            for (int i = 2; (int)fibonacci[i - 1] <= TheNumber; i++)
+            for (int i = 2; (int) fibonacci[i - 1] <= TheNumber; i++)
             {
-                fibonacci.Insert(i, (int)fibonacci[i - 1] + (int)fibonacci[i - 2]);
+                var value = (int) fibonacci[i - 1] + (int) fibonacci[i - 2];
+                if (value <= TheNumber)
+                    fibonacci.Insert(i, value);
             }
             return fibonacci;
         }
