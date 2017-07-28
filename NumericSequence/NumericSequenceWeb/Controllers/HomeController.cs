@@ -20,12 +20,18 @@ namespace NumericSequenceWeb.Controllers
             return View();
         }
 
- 
+        public ActionResult Result()
+        {
+            return View(new ResultViewModel());
+        }
+
+        [HttpPost]
         public ActionResult Result(int num)
         {
             numService.TheNumber = num;
             var model = new ResultViewModel()
             {
+                Number = num,
                 All = numService.All(),
                 Even = numService.Even(),
                 Odd = numService.Odd(),

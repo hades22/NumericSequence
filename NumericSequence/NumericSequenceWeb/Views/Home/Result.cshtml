@@ -5,15 +5,24 @@
 
 <h2>Result</h2>
 
-<p>All</p>
-
-@foreach (var v in Model.All)
+@if (Model.Number != 0)
 {
-    <p>@v</p>
-}
+    <p>All</p>
 
-<p>Odd</p>
-@foreach (var v in Model.Odd)
-{
-    <p>@v</p>
+foreach (var v in Model.All)
+ {
+     <p>@v</p>
+ }
+
+    <p>Odd</p>
+foreach (var v in Model.Odd)
+ {
+     <p>@v</p>
+ }
+
+    <p>Fibonacci</p>
+foreach (var v in Model.Fibonacci)
+ {
+     <p>@v</p>
+ }
 }

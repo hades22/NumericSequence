@@ -91,8 +91,9 @@ namespace NumericSequenceCore
             for (int i = 2; (int) fibonacci[i - 1] <= TheNumber; i++)
             {
                 var value = (int) fibonacci[i - 1] + (int) fibonacci[i - 2];
-                if (value <= TheNumber)
-                    fibonacci.Insert(i, value);
+                if (value > TheNumber)
+                    break;              
+                fibonacci.Insert(i, value);
             }
             return fibonacci;
         }

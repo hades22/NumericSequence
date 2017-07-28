@@ -8,6 +8,11 @@ namespace NumericSequenceWeb.Models
 {
     public class ResultViewModel
     {
+        public ResultViewModel()
+        {
+            Number = 0;
+        }
+        public int Number { get; set; }
         public List<int> All { get; set; }
         public List<int> Odd { get; set; }
         public List<int> Even { get; set; }
