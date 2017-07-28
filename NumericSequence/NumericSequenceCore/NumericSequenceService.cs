@@ -7,7 +7,17 @@ using System.Threading.Tasks;
 
 namespace NumericSequenceCore
 {
-    public class NumericSequenceService
+    public interface INumericSequenceService
+    {
+        int TheNumber { get; set; }
+        List<int> All();
+        List<int> Odd();
+        List<int> Even();
+        ArrayList Multipler();
+        ArrayList FibonacciGenerate();
+    }
+
+    public class NumericSequenceService: INumericSequenceService
     {
         public int TheNumber { get; set; }
         

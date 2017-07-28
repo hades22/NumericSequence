@@ -3,3 +3,8 @@ D:\Code\NumericSequence\NumericSequence\NumericSequenceCore\bin\Debug\NumericSeq
 D:\Code\NumericSequence\NumericSequence\NumericSequenceCore\obj\Debug\NumericSequenceCore.csprojResolveAssemblyReference.cache
 D:\Code\NumericSequence\NumericSequence\NumericSequenceCore\obj\Debug\NumericSequenceCore.dll
 D:\Code\NumericSequence\NumericSequence\NumericSequenceCore\obj\Debug\NumericSequenceCore.pdb
+E:\Workbench\Development\Code\NumericSequence\NumericSequence\NumericSequenceCore\bin\Debug\NumericSequenceCore.dll
+E:\Workbench\Development\Code\NumericSequence\NumericSequence\NumericSequenceCore\bin\Debug\NumericSequenceCore.pdb
+E:\Workbench\Development\Code\NumericSequence\NumericSequence\NumericSequenceCore\obj\Debug\NumericSequenceCore.csprojResolveAssemblyReference.cache
+E:\Workbench\Development\Code\NumericSequence\NumericSequence\NumericSequenceCore\obj\Debug\NumericSequenceCore.dll
+E:\Workbench\Development\Code\NumericSequence\NumericSequence\NumericSequenceCore\obj\Debug\NumericSequenceCore.pdb

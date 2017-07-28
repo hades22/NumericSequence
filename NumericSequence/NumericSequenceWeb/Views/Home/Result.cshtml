@@ -1,0 +1,19 @@
+﻿@model NumericSequenceWeb.Models.ResultViewModel
+@{
+    ViewBag.Title = "Result";
+}
+
+<h2>Result</h2>
+
+<p>All</p>
+
+@foreach (var v in Model.All)
+{
+    <p>@v</p>
+}
+
+<p>Odd</p>
+@foreach (var v in Model.Odd)
+{
+    <p>@v</p>
+}
