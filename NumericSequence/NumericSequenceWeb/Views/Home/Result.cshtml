@@ -3,32 +3,29 @@
     ViewBag.Title = "Result";
 }
 
+@using (Html.BeginForm("Result", "Home", FormMethod.Post))
+{
+<input type="text" name="num"/>
+<input type="submit" value="Submit" />
+}
+
 <h2>Result</h2>
 
 @if (Model.Number != 0)
 {
     <p>All</p>
 
-foreach (var v in Model.All)
- {
-     <p>@v</p>
- }
+   <p>@Model.AllList</p>
 
     <p>Odd</p>
-foreach (var v in Model.Odd)
- {
-     <p>@v</p>
-    }
+    <p>@Model.OddList</p>
+
+    <p>Even</p>
+    <p>@Model.EvenList</p>
 
     <p>Multipler</p>
-    foreach (var v in Model.Multipler)
-    {
-        <p>@v</p>
-    }
+    <p>@Model.MultiplerList</p>
 
     <p>Fibonacci</p>
-foreach (var v in Model.Fibonacci)
- {
-     <p>@v</p>
- }
+    <p>@Model.FibonacciList</p>
 }
