@@ -3,10 +3,12 @@
     ViewBag.Title = "Result";
 }
 
+<p>Please input an integer between 0 and 100</p>
 @using (Html.BeginForm("Result", "Home", FormMethod.Post))
 {
-<input type="text" name="num"/>
-<input type="submit" value="Submit" />
+    <p><input type="text" name="num" id="num" required /></p>
+    <p><input type="submit" id="submit" value="Submit" /></p>
+    
 }
 
 <h2>Result</h2>
@@ -29,3 +31,21 @@
     <p>Fibonacci</p>
     <p>@Model.FibonacciList</p>
 }
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#submit").click(function () {
+            var str = $("#num").val();
+            var n = Math.floor(Number(str));
+            if (String(n) === str && n >= 0 && n <= 100)
+            { return true; }
+            else {
+                alert("Invalid Number: " + str);
+                return false;
+            }
+        });
+    });
+    //function validate() {
+    //    alert($("#num").val);
+    //}
+</script>
