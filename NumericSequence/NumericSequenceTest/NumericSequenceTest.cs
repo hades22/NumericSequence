@@ -74,9 +74,11 @@ namespace NumericSequenceTest
             Assert.AreEqual((int) fibonacciList[0], 0);
             Assert.AreEqual((int) fibonacciList[1], 1);
 
-            for (int i = 2; (int) fibonacciList[i] <= numService.TheNumber; i++)
+            for (int i = 2; (int) fibonacciList[i-1] <= numService.TheNumber; i++)
             {
-                Assert.AreEqual((int) fibonacciList[i], (int) fibonacciList[i - 1] + (int) fibonacciList[i - 2]);
+                if ((int)fibonacciList[i - 1] + (int)fibonacciList[i - 2] > numService.TheNumber)
+                    break;
+                Assert.AreEqual((int)fibonacciList[i], (int)fibonacciList[i - 1] + (int)fibonacciList[i - 2]);
             }
 
         }
